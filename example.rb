@@ -5,28 +5,9 @@ class Car
     @price = price
     @color = color
   end
-
-  def make=(text)
-    @make = text
-  end
-  def make
-    @make
-  end
-
-  def model
-    @model
-  end
-
-  def price=(number)
-    @price = number
-  end
-  def price
-    @price
-  end
-
-  def color
-    @color
-  end
+  attr_reader :model, :color
+  attr_writer :make, :price
+  
 
 end
 car1 = Car.new("Toyota", "Colora", 2000, "black")
