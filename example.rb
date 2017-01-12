@@ -1,17 +1,17 @@
 class Car
-  def initialize(make, model, price, color)
-    @make = make
-    @model = model
-    @price = price
-    @color = color
+  def initialize(car_harsh)
+    @make = car_harsh[:make]
+    @model = car_harsh[:model]
+    @price = car_harsh[:price]
+    @color = car_harsh[:color]
   end
-  attr_reader :model, :color
-  attr_writer :make, :price
-  
+  attr_accessor :model, :color, :make, :price 
+  def info 
+    "#{@make} #{@model} #{@price} #{color}"
+  end
 
 end
-car1 = Car.new("Toyota", "Colora", 2000, "black")
-puts car1.model
-puts car1.color
+car1 = Car.new({model: "Colora", price: 2000, color: "black", make: "Toyota"})
+puts car1.info
 puts car1.make=("BMW")
 puts car1.price=(5000)
