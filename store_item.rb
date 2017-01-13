@@ -1,3 +1,25 @@
-car1 = {"make" => "Toyota", "color" => "black", "model" =>"colora", "price" => "2000"}
-car2 = {"make" => "BMW", "color" => "blue", "model" =>"something", "price" => "5000"}
-car3 = {"make" => "Benz", "color" => "yellow", "model" => "ok", "price" => "2000"}
+# Complete the method called find_longest_word, which will accept a string as a parameter (usually a sentence), and return another string that will be the longest word in that sentence.
+class Word 
+ 
+  def find_longest_word(sentence)
+    
+    # Driver code - don't touch anything below this line.
+    puts "TESTING find_longest_word..."
+    puts
+
+    result = find_longest_word("What is the longest word in this phrase?")
+
+    puts "Your method returned:"
+    puts result
+    puts
+
+    if result == "longest"
+    puts "PASS!"
+    else
+    puts "F"
+    end
+  end
+end
+
+word = Word.new
+puts word.find_longest_word("ok I love you") 
